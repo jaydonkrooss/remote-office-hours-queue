@@ -78,6 +78,10 @@ if DEBUG:
     ]
 
 WATCHMAN_TOKENS = os.getenv('WATCHMAN_TOKENS')
+WATCHMAN_TOKEN_NAME = os.getenv('WATCHMAN_TOKEN_NAME', 'officehours-watchman-token')
+WATCHMAN_CHECKS = ('watchman.checks.caches', 'watchman.checks.databases')
+WATCHMAN_DISABLE_APM = str_to_bool(os.getenv('WATCHMAN_DISABLE_APM', 'false'))
+EXPOSE_WATCHMAN_VERSION = str_to_bool(os.getenv('EXPOSE_WATCHMAN_VERSION', 'false'))
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -332,6 +336,7 @@ TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
 TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
 TWILIO_MESSAGING_SERVICE_SID = os.getenv('TWILIO_MESSAGING_SERVICE_SID')
 OTP_REQUEST_BUFFER = int(os.getenv('OTP_REQUEST_BUFFER', "30"))
+UM_SMS_IDENTIFIER = os.getenv('UM_SMS_IDENTIFIER', '[U-M Office Hours]')
 
 # Backends
 DOCS_BASE_URL = 'https://its.umich.edu/communication/videoconferencing/'
