@@ -34,7 +34,7 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "css-loader": "~6.11.0",
-    "mini-css-extract-plugin": "2.10.0",
+    "mini-css-extract-plugin": "2.10.1",
     "style-loader": "~3.3.4",
     "ts-loader": "^9.5.4",
     "typescript": "^4.9.5",
